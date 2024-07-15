@@ -10,17 +10,19 @@
 	
 	<properties>
 		<docker.image.prefix>kammana</docker.image.prefix>
-		<maven.compiler.source>1.6</maven.compiler.source>
- 	        <maven.compiler.target>1.6</maven.compiler.target>
+		<maven.compiler.release>17</maven.compiler.release>
 	</properties>
 
 	<dependencies>
 		<dependency>
-		    <groupId>com.oracle.bedrock</groupId>
-		    <artifactId>bedrock-runtime-maven</artifactId>
-		    <version>5.1.2</version>
-		</dependency>
-		
+		    <plugin>
+    			<groupId>org.apache.maven.plugins</groupId>
+    			<artifactId>maven-compiler-plugin</artifactId>
+   			<version>3.12.1</version>
+    			<configuration>
+       			 	<release>7</release>
+   			 </configuration>
+		    </plugin>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
